@@ -17,6 +17,7 @@ We have used Simple Moving Average (SMA) for smoothing since our data is noisy b
 library (pacman)
 
 p_load (readxl, tseries)
+
 uk <- read.csv("C:/Users/'username'/Desktop/'filename'.csv", header = T)
 'filename'[is.na('filename')] = 0
 
@@ -28,10 +29,13 @@ class('filenamecases')
 head('filenamecases')
 
 lag0 <- lag('filenamecases', n=5)
+
 lag1 <- lag('filenamecases', n=7)
+
 lag2 <- lag('filenamecases', n=9)
 
 'filename_ts1' <- ts(lag1[, 2], start = c(1, 1), end = c(515, 1), frequency = 1)
+
 'filename_ts1'
 
 'filenamedeaths' <- 'filename' %>%
@@ -39,24 +43,30 @@ lag2 <- lag('filenamecases', n=9)
 
 'filename_ts2' <- ts('filenamedeaths'[, 2], start = c(1, 1), end = c(515, 1), frequency = 1)      
 
-#par(mar = c(5, 4, 4, 4) + 0.3)
-#plot('filename_ts1')
-#par(new=T)    
-#plot('filename_ts2', col="red", axes = FALSE, pretty(range('filename_ts1', na.rm=T)))
-
 'filename_ts1' <- pmax('filename_ts1',0)
+
 c1 = range('filename_ts1', na.rm=T)
+
 c1
+
 c2 = range('filename_ts2', na.rm=T)
+
 c2
 
 plot('filename_ts1', ylim=c1, ylab="Cases")
+
 par(new=T)
+
 plot('filename_ts2', ylab=NA, axes=F, col="red", ylim=c(0, 2000))
+
 axis(4, las=0, ylab="Deaths", tck=0.01)
+
 mtext("Deaths", side=4, col="red")
+
 par(new=T)
+
 plot('filename$tvaxp', ylab=NA, axes=F, col="green", ylim=c(0, 100))
+
 mtext("% Vaccination", side=3, col="green")
 
 --
