@@ -2,7 +2,7 @@
 
 We are examining the correlation between covid-19 mortality and vaccination. Our data set consists information of 'new cases', 'new deaths', '% of Vaccination' sorted by date, for various countries ('% of Vaccination' is according the ratio of Total Doses Administered/Total Population). Our goal is to present effectiveness of vaccines (on the death ratio) with graphics which can be understand by general public.
 
-The data set which was used gathered from Our World in Data's covid-19-data repository*.
+The data set which was used gathered from Our World in Data's covid-19-data repository(^1).
 
 We are using R Studio, version 1.4.1717, along with R for Windows, version 4.1.0, with these packages; pacman, readxl, tseries in addition to system library packages.
 
@@ -10,9 +10,9 @@ We have manipulated the data set with; lag of 7, 9 and 12 days on 'new cases' be
 
 We have used Simple Moving Average (SMA) for smoothing since our data is noisy because there are lots of data missing for various dates (throughout the pandemic data flow from institutions have been intermittent).
 
-* https://github.com/owid/covid-19-data
+(^1) https://github.com/owid/covid-19-data
 
---
+```
 
 library (pacman)
 
@@ -69,4 +69,5 @@ plot('filename$tvaxp', ylab=NA, axes=F, col="green", ylim=c(0, 100))
 
 mtext("% Vaccination", side=3, col="green")
 
---
+```
+
