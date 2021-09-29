@@ -76,21 +76,21 @@ head('filenamecases')
 
 # We are starting to plot, and want 3 different variables to be presented together.
 
-plot('filename_ts1', ylim=c1, ylab="Cases")
+>plot('filename_ts1', ylim=c1, ylab="Cases")
 
-par(new=T)
+> par(new=T)
 
-plot('filename_ts2', ylab=NA, axes=F, col="red", ylim=c(0, 2000))
+> plot('filename_ts2', ylab=NA, axes=F, col="red", ylim=c(0, 2000))
 
-axis(4, las=0, ylab="Deaths", tck=0.01)
+> axis(4, las=0, ylab="Deaths", tck=0.01)
 
-mtext("Deaths", side=4, col="red")
+> mtext("Deaths", side=4, col="red")
 
-par(new=T)
+> par(new=T)
 
-plot('filename$tvaxp', ylab=NA, axes=F, col="green", ylim=c(0, 100))
+> plot('filename$tvaxp', ylab=NA, axes=F, col="green", ylim=c(0, 100))
 
-mtext("% Vaccination", side=3, col="green", ylim=c(0, 100))
+> mtext("% Vaccination", side=3, col="green", ylim=c(0, 100))
 
 # Thank you for your interest.
 
