@@ -1,5 +1,7 @@
 # covidmortality-vax
 
+> ⚠️ **STATUS: BROKEN / METHODS UNDER REVIEW** — the analysis script in this repository is non-executable pseudo-code and does not compute the statistics described below. Do not cite or reuse. A corrected, executable revision is in progress (see PRs).
+
 We are examining the correlation between covid-19 mortality and vaccination. Our data set consists information of 'new cases', 'new deaths', '% of Vaccination' sorted by date, for various countries ('% of Vaccination' is according the ratio of Total Doses Administered/Total Population). Our goal is to present effectiveness of vaccines (on the death ratio) with graphics which can be understand by general public.
 
 The data set which was used gathered from Our World in Data's covid-19-data repository[^1].
@@ -95,4 +97,3 @@ head('filenamecases')
 # Thank you for your interest.
 
 ```
-
